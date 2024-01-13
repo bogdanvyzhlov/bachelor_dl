@@ -14,4 +14,4 @@ my_app/
 
 ```
 ## <p align="center">Screenshot of outcomes</p>
-<p align="center"><img src="https://github.com/bogdanvyzhlov/bachelor_dl/app/static/outcome.png" alt="ER" width="600"/></p>
+<p align="center"><img src="https://github.com/bogdanvyzhlov/app/static/outcome.png" alt="ER" width="600"/></p>
