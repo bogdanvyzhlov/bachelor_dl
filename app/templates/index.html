@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Scraper</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Scraper</h1>
+
+        <form method="POST" action="{{ url_for('index') }}">
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" required>
+            <button type="submit">Scrape Images</button>
+        </form>
+
+        {% if images %}
+            <h2>Download Images:</h2>
+            <ul>
+                {% for image in images %}
+                    <li>
+                        <a href="{{ url_for('download', filename=image['name']) }}" target="_blank">
+                            <img src="{{ url_for('download', filename=image['name']) }}" alt="{{ image['name'] }}">
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
+
